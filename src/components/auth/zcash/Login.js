@@ -14,7 +14,7 @@ const Login = () => {
     const zcash_address = localStorage.getItem('zcash_address');
     console.log(zcash_address);
 
-    const response = await fetch('http://localhost:8000/login/', {
+    const response = await fetch('https://zchat-api.onrender.com/login/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

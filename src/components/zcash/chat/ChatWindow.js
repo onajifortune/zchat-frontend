@@ -51,7 +51,7 @@ const ChatWindow = ({ transaction, onPopUpClick, chatData, setSenderData, setRec
   useEffect(() => {
     console.log("Fetching current user...");
     // Fetch client_id from backend
-    fetch('http://localhost:8000/users/me/', {
+    fetch('https://zchat-api.onrender.com/users/me/', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,  // Include the token in the Authorization header
@@ -110,7 +110,7 @@ useEffect(() => {
     setSenderData(currentUser);
     setReceiverData(receipientUser);
     // Fetch chat history
-    fetch(`http://localhost:8000/messages/${currentUser.username}/${receipientUser.username}`, {
+    fetch(`https://zchat-api.onrender.com/messages/${currentUser.username}/${receipientUser.username}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -158,7 +158,7 @@ useEffect(() => {
             transaction: null
         };
         console.log(transaction)
-        fetch('http://localhost:8000/messages/', {
+        fetch('https://zchat-api.onrender.com/messages/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

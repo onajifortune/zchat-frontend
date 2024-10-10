@@ -9,7 +9,7 @@ const ListUsers = () => {
     const token = localStorage.getItem('access_token');
 
     // Fetch the current user's information
-    fetch('http://localhost:8000/users/me/', {
+    fetch('https://zchat-api.onrender.com/users/me/', {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -19,7 +19,7 @@ const ListUsers = () => {
       .catch(error => console.error('Error fetching current user:', error));
 
     // Fetch all users excluding the current user
-    fetch('http://localhost:8000/users/', {
+    fetch('https://zchat-api.onrender.com/users/', {
       headers: {
         'Authorization': `Bearer ${token}`,
       },

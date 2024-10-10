@@ -6,7 +6,7 @@ import { Navigate } from 'react-router-dom';
 //   if (!token) return false;
 
 //   try {
-//     const response = await fetch('http://localhost:8000/token_status/', {
+//     const response = await fetch('https://zchat-api.onrender.com/token_status/', {
 //       method: 'GET',
 //       headers: {
 //         'Authorization': `Bearer ${token}`
@@ -30,7 +30,7 @@ const ProtectedRoute = ({ element }) => {
       if (!token) return false;
     
       try {
-        const response = await fetch('http://localhost:8000/token_status/', {
+        const response = await fetch('https://zchat-api.onrender.com/token_status/', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`

@@ -34,7 +34,7 @@ const ChatList = ({ onSendData }) => {
     const token = localStorage.getItem('access_token');
 
     // Fetch the current user's information
-    fetch('http://localhost:8000/users/me/', {
+    fetch('https://zchat-api.onrender.com/users/me/', {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -44,7 +44,7 @@ const ChatList = ({ onSendData }) => {
       .catch(error => console.error('Error fetching current user:', error));
 
     // Fetch all users excluding the current user
-    // fetch('http://localhost:8000/users/', {
+    // fetch('https://zchat-api.onrender.com/users/', {
     //   headers: {
     //     'Authorization': `Bearer ${token}`,
     //   },
@@ -63,7 +63,7 @@ const ChatList = ({ onSendData }) => {
 
       // Fetch all users excluding the current user
       if (currentUser.id) {
-      fetch(`http://localhost:8000/users/latest-messages/${currentUser.id}`, {
+      fetch(`https://zchat-api.onrender.com/users/latest-messages/${currentUser.id}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'

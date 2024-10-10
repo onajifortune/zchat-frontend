@@ -27,7 +27,7 @@ const PopUp = ({ setData, onClose, currentUserData, reciverUserData }) => {
     const token = localStorage.getItem('access_token');
 
     // Fetch the current user's information
-    fetch('http://localhost:8000/users/me/', {
+    fetch('https://zchat-api.onrender.com/users/me/', {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -114,7 +114,7 @@ const PopUp = ({ setData, onClose, currentUserData, reciverUserData }) => {
             transaction: Number(amount)
         };
       // Fetch the current user's information
-      fetch('http://localhost:8000/zcash/send-to-address/', {
+      fetch('https://zchat-api.onrender.com/zcash/send-to-address/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

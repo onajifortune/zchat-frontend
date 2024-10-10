@@ -34,7 +34,7 @@ const Chat = () => {
   useEffect(() => {
     console.log("Fetching current user...");
     // Fetch client_id from backend
-    fetch('http://localhost:8000/users/me/', {
+    fetch('https://zchat-api.onrender.com/users/me/', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,  // Include the token in the Authorization header
@@ -88,7 +88,7 @@ const Chat = () => {
 useEffect(() => {
   if ( currentUser ) {
     // Fetch chat history
-    fetch(`http://localhost:8000/messages/${currentUser.username}/${username}`, {
+    fetch(`https://zchat-api.onrender.com/messages/${currentUser.username}/${username}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -118,7 +118,7 @@ useEffect(() => {
     event.preventDefault();
     const eMessage = encryptMessage(messageText);
     if (messageText) {
-        fetch('http://localhost:8000/messages/', {
+        fetch('https://zchat-api.onrender.com/messages/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

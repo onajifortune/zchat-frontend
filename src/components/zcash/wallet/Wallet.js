@@ -11,7 +11,7 @@ const Wallet = () => {
         const token = localStorage.getItem('access_token');
         console.log("Fetching current user...");
         // Fetch client_id from backend
-        fetch('http://localhost:8000/users/me/', {
+        fetch('https://zchat-api.onrender.com/users/me/', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`,  // Include the token in the Authorization header
