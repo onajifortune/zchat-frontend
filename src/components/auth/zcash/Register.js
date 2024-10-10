@@ -7,7 +7,6 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -33,7 +32,6 @@ const Register = () => {
       navigate('/login'); // Redirect to another page after successful login
     } else {
         console.log(response)
-      setError('Failed to Register. Zcash is temporarily unavailable.');
       alert('Failed to Register. Zcash is temporarily unavailable.');
     }
   };
@@ -44,7 +42,6 @@ const Register = () => {
       </div>
       <div className="login">
         <h2 className="form-title">Sign Up</h2>
-        {error && <p>{error}</p>}
         <form className="login-form" onSubmit={handleSubmit}>
           {/* Email input */}
           <div data-mdb-input-init className="form-outline mb-4">

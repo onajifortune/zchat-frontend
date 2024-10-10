@@ -6,7 +6,6 @@ import './Login.css'
 const Login = () => {
   const [wallet, setWallet] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -31,7 +30,7 @@ const Login = () => {
       localStorage.setItem('access_token', data.access_token);
       navigate('/'); // Redirect to another page after successful login
     } else {
-      setError('Login failed. Please check your email and password.');
+      alert('Login failed. Please check your email and password.');
     }
   };
 
@@ -41,7 +40,6 @@ const Login = () => {
       </div>
       <div className="login">
         <h2 className="form-title">Sign In</h2>
-        {error && <p>{error}</p>}
         <form className="login-form" onSubmit={handleSubmit}>
           {/* Wallet input */}
           <div data-mdb-input-init className="form-outline mb-4">
