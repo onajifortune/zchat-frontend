@@ -33,7 +33,8 @@ const Register = () => {
       navigate('/login'); // Redirect to another page after successful login
     } else {
         console.log(response)
-      setError('Login failed. Please check your email and password.');
+      setError('Failed to Register. Zcash is temporarily unavailable.');
+      alert('Failed to Register. Zcash is temporarily unavailable.');
     }
   };
 
