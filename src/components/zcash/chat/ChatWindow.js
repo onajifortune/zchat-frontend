@@ -66,7 +66,7 @@ const ChatWindow = ({ transaction, onPopUpClick, chatData, setSenderData, setRec
 
       // Only create a WebSocket if one doesn't already exist
       if (!ws.current) {
-        ws.current = new WebSocket(`ws://zchat-api.onrender.com/ws/private/${data.id}`);
+        ws.current = new WebSocket(`wss://zchat-api.onrender.com/ws/private/${data.id}`);
 
         ws.current.onopen = () => {
           setConnectionStatus('Connected');
