@@ -121,7 +121,7 @@ const ChatList = ({ onSendData }) => {
                   </div>
                   <div className="frame-4273204861">
                     <div className="damnedest">
-                    {user.username}
+                    {user.username.charAt(0).toUpperCase()}
                     </div>
                     <span className="its-been-along-day-bud-ill-send-you-some-zto-get-some-refre">
                     {user.latest_message ? user.latest_message : user.transaction ? `${user.transaction} ZEC Transfer` : null}

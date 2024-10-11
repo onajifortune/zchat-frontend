@@ -203,7 +203,7 @@ useEffect(() => {
             <div className="container-9">
             </div>
             <div className="quincy-1">
-            {chatData.username}
+            {chatData.username.charAt(0).toUpperCase()}
             </div>
           </div>
           <div className="group-3095">
