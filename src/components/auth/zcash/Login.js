@@ -28,7 +28,7 @@ const Login = () => {
       const data = await response.json();
       console.log(data);
       localStorage.setItem('access_token', data.access_token);
-      navigate('/'); // Redirect to another page after successful login
+      navigate('/messages'); // Redirect to another page after successful login
     } else {
       alert('Login failed. Please check your email and password.');
     }
@@ -43,7 +43,7 @@ const Login = () => {
         <form className="login-form" onSubmit={handleSubmit}>
           {/* Wallet input */}
           <div data-mdb-input-init className="form-outline mb-4">
-            <label className="form-label" htmlFor="form2Example2">Wallet</label>
+            <label className="form-label" htmlFor="form2Example2">Username</label>
             <input
               type="text"
               id="form2Example2"

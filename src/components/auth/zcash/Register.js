@@ -27,7 +27,7 @@ const Register = () => {
     if (response.ok) {
       const data = await response.json();
       console.log(data);
-      alert(data.zcash_address)
+      // alert(data.zcash_address)
       localStorage.setItem('zcash_address', data.zcash_address);
       navigate('/login'); // Redirect to another page after successful login
     } else {
